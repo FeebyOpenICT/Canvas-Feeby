@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     image: lbjay/canvas-docker
     labels:
-      caddy: canvas.lucabergman.nl, canvas.lucabergman.com
+      caddy: canvas.lucabergman.nl
       caddy.reverse_proxy: "{{upstreams 3000}}"
 
 
