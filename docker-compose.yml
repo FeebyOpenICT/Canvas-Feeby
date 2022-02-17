@@ -4,6 +4,8 @@ services:
     container_name: canvas-feeby
     restart: unless-stopped
     image: lbjay/canvas-docker
+    networks:
+      - caddy
     labels:
       caddy: canvas.lucabergman.nl
       caddy.reverse_proxy: "{{upstreams 3000}}"
