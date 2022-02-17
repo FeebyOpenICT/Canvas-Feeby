@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  canvas-feeby:
+    container_name: canvas-feeby
+    image: lbjay/canvas-docker
+    labels:
+      caddy: canvas.lucabergman.nl, canvas.lucabergman.com
+      caddy.reverse_proxy: "{{upstreams 3000}}"
+
+
+networks:
+  caddy:
+    external: true
