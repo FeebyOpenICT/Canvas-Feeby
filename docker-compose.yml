@@ -2,7 +2,7 @@ version: '3.3'
 services:
   canvas-feeby:
     container_name: canvas-feeby
-    restart: always
+    restart: unless-stopped
     image: lbjay/canvas-docker
     labels:
       caddy: canvas.lucabergman.nl, canvas.lucabergman.com
